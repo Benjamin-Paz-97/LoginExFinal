@@ -41,9 +41,25 @@
             background: #FF4157;
             color: white;
         }
-
-        .caja {
-            background: white;
+        .form-group-input{
+            height: 42px;
+            font-size: 18px;
+            border: 0;
+            padding-left: 54px;
+            border-radius: 5px;
+        }
+        .form-group::before{
+            font-family: "font awesone\ 5 free";
+            position: absolute;
+            
+            font-size: 10px;
+            padding-top:  4px;
+        }
+        .form-group#user-group::before{
+            content: url("images/usuario.png");
+        }
+        .form-group#pasword-group::before{
+            content:url("images/bloquear.png");
         }
     </style>
 </head>
@@ -56,17 +72,11 @@
                     <div class="form-group text-center">
                         <h1 class="text-ligth">Login Form</h1>
                     </div>
-                    <div class="form-group mx-sm-4 mb-4 pt-3 ">
-                        <div class="col-2 d-none d-md-block">
-                            <img src="images/usuario.png" width="30" alt="">
-                        </div>
-                        <input type="text" class="form-control" placeholder="Email or Phone">
+                    <div class="form-group mx-sm-4 mb-4 pt-3 " id="user-group">
+                        <input type="text" class="form-control form-group-input" placeholder="Email or Phone">
                     </div>
-                    <div class="form-group mx-sm-4 mb-2 pt3">
-                        <div class="col-2 d-none d-md-block">
-                            <img src="images/bloquear.png" width="25" alt="">
-                        </div>
-                        <input type="text" class="form-control" placeholder="Pasdword">
+                    <div class="form-group mx-sm-4 mb-2 pt3" id="pasword-group">
+                        <input type="text" class="form-control form-group-input" placeholder="Pasdword">
                     </div>
                     <div class="form-group mx-sm-4 mb-3 my-3">
                         <span><a href="#">Forgot Pasdword?</a></span> <br>
